@@ -9,7 +9,6 @@ import org.junit.runner.RunWith;
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         features = {"src/test/resources/features/reserva_vuelos.feature"},
         glue =  {"co.com.stepdefinition"},
-        tags = "not @ignore",
         publish = true
 )
 public class VueloReservaTestCucumber {
