@@ -1,7 +1,10 @@
 package co.com.despegar.configuracion;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import static io.cucumber.messages.internal.com.google.common.base.StandardSystemProperty.USER_DIR;
 
 public class WebUI {
 
@@ -31,6 +34,7 @@ public class WebUI {
         driver.quit();
     }
 
-    //falta log4j
-
+    protected void maximize(){
+        driver.manage().window().maximize();
+    }
 }

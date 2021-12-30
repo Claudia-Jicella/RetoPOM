@@ -45,7 +45,7 @@ public class VueloReservaTestCucumberStepDefinition extends WebUI {
 
         try {
             Assertions.assertEquals(reservaVuelosPagina.validadcionMetodoPago(),
-                "¿Cómo deseas pagar?", "No son iguales");
+                "¿Cómo deseas pagar?", "El texto es diferente");
 
         } catch (Exception exception){
             quiteDriver();
@@ -58,7 +58,7 @@ public class VueloReservaTestCucumberStepDefinition extends WebUI {
         cliente = new ReservaVuelos();
         cliente.setOpcionReserva(OpcionReserva.SOLO_IDA);
         cliente.setOrigen(" Bogota");
-        cliente.setDestino(" Neiva");
+        cliente.setDestino(" Cali");
         cliente.setFechaIda("2022-01-12");
     }
 
@@ -78,7 +78,14 @@ public class VueloReservaTestCucumberStepDefinition extends WebUI {
     @Then("el sistema debera mostrar los detalles del pago")
     public void elSistemaDeberaMostrarLosDetallesDelPago() {
 
+        try {
+            Assertions.assertEquals(reservaVuelosPagina.validacionDetallePago(),
+                    "Detalle del pago", "El texto es diferente");
+        }catch (Exception exception){
+            quiteDriver();
+            Assertions.fail(exception.getMessage(),exception);
 
+        }
 
     }
 }

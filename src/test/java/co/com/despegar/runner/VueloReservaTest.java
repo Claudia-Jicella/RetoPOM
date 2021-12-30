@@ -39,7 +39,6 @@ public class VueloReservaTest extends WebUI {
         }
     }
 
-
     @AfterEach
     public void cerrarReserva() {
         quiteDriver();
@@ -48,7 +47,7 @@ public class VueloReservaTest extends WebUI {
     private void clienteGeneral () {
         cliente = new ReservaVuelos();
         cliente.setOpcionReserva(OpcionReserva.SOLO_IDA);
-        cliente.setOrigen(" Cali");
+        cliente.setOrigen(" Neiva");
         cliente.setDestino(" Bogota");
         cliente.setFechaIda("2022-01-12");
 

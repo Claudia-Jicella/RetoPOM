@@ -8,8 +8,9 @@ public class ReservaVuelos {
     private String origen;
     private String destino;
     private String fechaIda;
-
-
+    private String diaIda;
+    private String mesIda;
+    private String añoIda;
 
     public ReservaVuelos() {
     }
@@ -46,4 +47,27 @@ public class ReservaVuelos {
         this.fechaIda = fechaIda;
     }
 
+    public String getDiaIda() {
+        return diaIda;
+    }
+
+    public void setDiaIda(String diaIda) {
+        this.diaIda = diaIda;
+    }
+
+    public String getMesIda() {
+        return mesIda;
+    }
+
+    public void setMesIda(String mesIda) {
+        this.mesIda = mesIda;
+    }
+
+    public String getAñoIda() {
+        return añoIda;
+    }
+
+    public void setAñoIda(String añoIda) {
+        this.añoIda = añoIda;
+    }
 }
